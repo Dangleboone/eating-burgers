@@ -1,64 +1,32 @@
-<div class="row justify-content-center py-5">
+<!DOCTYPE html>
+<html lang="en">
 
-  <h1>Eating Burgers!</h1>
+<head>
+	<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="assets/css/burger_style.css">
+	<title>Eating Burgers!</title>
 
-</div>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-<div class="row justify-content-center">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
 
-  <div class="col-3 justify-content-center">
-    <h3>
-      Devoured
-    </h3>
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="/assets/js/burger.js"></script>
 
-    <ul class="list-group">
-      {{#each burgers}}
+</head>
 
-      {{#if devoured}}
-      <li class="list-group-item bg-danger">
-        <span class="menu-item">Burger Name : {{burger_name}}</span>
-        <br>
-      </li>
+<body>
+	<div class="bg-warning">
+	{{{ body }}}
+	</div>
+</body>
 
-      {{/if}}
-
-      {{/each}}
-    </ul>
-  </div>
-
-  <div class="col-3 justify-content-center">
-    <h3>
-      Menu
-    </h3>
-
-    <ul class="list-group">
-      {{#each burgers}}
-
-      {{#unless devoured}}
-      <li class="list-group-item bg-dark">
-        <button class="devour-button btn btn-warning" data-id="{{id}}">Devour it!</button>
-        <span class="text-light menu-item">Burger Name : {{burger_name}}</span>
-        <br>
-      </li>
-      <br>
-      {{/unless}}
-
-      {{/each}}
-    </ul>
-  </div>
-</div>
-
-<div class="row justify-content-center py-5">
-  <div class="justify-content-center m-0">
-    <h2>Add a Burger</h2>
-    <form class="create-form">
-
-      <div class="form-group">
-        <label for="name">Burger Name:</label>
-        <input type="text" id="name" name="burger_name">
-      </div>
-
-      <button type="submit">Add Burger</button>
-    </form>
-  </div>
-</div>
+</html>
